@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		A52A486A2590161F0043931E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A48692590161F0043931E /* AppDelegate.swift */; };
-		A52A486C2590161F0043931E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A486B2590161F0043931E /* SceneDelegate.swift */; };
-		A52A486E2590161F0043931E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A486D2590161F0043931E /* ViewController.swift */; };
-		A52A48712590161F0043931E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52A486F2590161F0043931E /* Main.storyboard */; };
 		A52A4873259016210043931E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52A4872259016210043931E /* Assets.xcassets */; };
 		A52A4876259016210043931E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52A4874259016210043931E /* LaunchScreen.storyboard */; };
+		A52C3AC52590176700AC5E8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AC32590176700AC5E8F /* HomeViewController.swift */; };
+		A52C3AC62590176700AC5E8F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52C3AC42590176700AC5E8F /* HomeViewController.xib */; };
+		A52C3AC92590177A00AC5E8F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AC82590177A00AC5E8F /* BaseViewController.swift */; };
+		A52C3ACE259017F600AC5E8F /* GNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3ACD259017F600AC5E8F /* GNavigationController.swift */; };
+		A52C3AD3259018C300AC5E8F /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AD2259018C300AC5E8F /* AppColors.swift */; };
+		A574BEA6259017140007A880 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574BEA5259017140007A880 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A52A48662590161F0043931E /* GorillaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52A48692590161F0043931E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A52A486B2590161F0043931E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A52A486D2590161F0043931E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A52A48702590161F0043931E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A52A4872259016210043931E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A52A4875259016210043931E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A52A4877259016210043931E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A52C3AC32590176700AC5E8F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A52C3AC42590176700AC5E8F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A52C3AC82590177A00AC5E8F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A52C3ACD259017F600AC5E8F /* GNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNavigationController.swift; sourceTree = "<group>"; };
+		A52C3AD2259018C300AC5E8F /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		A574BEA5259017140007A880 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +46,13 @@
 		A52A485D2590161F0043931E = {
 			isa = PBXGroup;
 			children = (
-				A52A48682590161F0043931E /* GorillaTest */,
+				A52A4872259016210043931E /* Assets.xcassets */,
+				A52A4874259016210043931E /* LaunchScreen.storyboard */,
+				A52C3ACB2590179F00AC5E8F /* Networking */,
+				A574BEA8259017220007A880 /* Common */,
+				A574BEA4259017070007A880 /* Routers */,
+				A52A4880259016A40043931E /* Config */,
+				A52A4881259016B30043931E /* Modules */,
 				A52A48672590161F0043931E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +65,119 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A52A48682590161F0043931E /* GorillaTest */ = {
+		A52A4880259016A40043931E /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				A52A48692590161F0043931E /* AppDelegate.swift */,
-				A52A486B2590161F0043931E /* SceneDelegate.swift */,
-				A52A486D2590161F0043931E /* ViewController.swift */,
-				A52A486F2590161F0043931E /* Main.storyboard */,
-				A52A4872259016210043931E /* Assets.xcassets */,
-				A52A4874259016210043931E /* LaunchScreen.storyboard */,
 				A52A4877259016210043931E /* Info.plist */,
 			);
-			path = GorillaTest;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A52A4881259016B30043931E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A574BEA0259016E30007A880 /* CreatePost */,
+				A574BE9F259016DF0007A880 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A52C3AC22590175A00AC5E8F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A52C3ACB2590179F00AC5E8F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A52C3ACC259017E700AC5E8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3ACD259017F600AC5E8F /* GNavigationController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A52C3AD1259018BA00AC5E8F /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3AD2259018C300AC5E8F /* AppColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		A574BE9F259016DF0007A880 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3AC22590175A00AC5E8F /* Service */,
+				A574BEA3259017010007A880 /* ViewModel */,
+				A574BEA2259016FC0007A880 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A574BEA0259016E30007A880 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		A574BEA2259016FC0007A880 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3AC32590176700AC5E8F /* HomeViewController.swift */,
+				A52C3AC42590176700AC5E8F /* HomeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A574BEA3259017010007A880 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A574BEA4259017070007A880 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				A574BEA5259017140007A880 /* HomeRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		A574BEA8259017220007A880 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3AD1259018BA00AC5E8F /* Colors */,
+				A52C3ACC259017E700AC5E8F /* Views */,
+				A574BEAA259017350007A880 /* Bases */,
+				A574BEA9259017300007A880 /* Protocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A574BEA9259017300007A880 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A574BEAA259017350007A880 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3AC82590177A00AC5E8F /* BaseViewController.swift */,
+			);
+			path = Bases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +239,7 @@
 			files = (
 				A52A4876259016210043931E /* LaunchScreen.storyboard in Resources */,
 				A52A4873259016210043931E /* Assets.xcassets in Resources */,
-				A52A48712590161F0043931E /* Main.storyboard in Resources */,
+				A52C3AC62590176700AC5E8F /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52A486E2590161F0043931E /* ViewController.swift in Sources */,
+				A52C3ACE259017F600AC5E8F /* GNavigationController.swift in Sources */,
 				A52A486A2590161F0043931E /* AppDelegate.swift in Sources */,
-				A52A486C2590161F0043931E /* SceneDelegate.swift in Sources */,
+				A52C3AC92590177A00AC5E8F /* BaseViewController.swift in Sources */,
+				A52C3AD3259018C300AC5E8F /* AppColors.swift in Sources */,
+				A574BEA6259017140007A880 /* HomeRouter.swift in Sources */,
+				A52C3AC52590176700AC5E8F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A52A486F2590161F0043931E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A52A48702590161F0043931E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A52A4874259016210043931E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +395,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GorillaTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +414,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GorillaTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
