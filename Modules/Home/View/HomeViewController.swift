@@ -4,13 +4,15 @@ class HomeViewController: BaseViewController {
     // MARK: - UI References
     @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView?
+    @IBOutlet private weak var newPostView: UIView?
 
     // MARK: - Properties
     private var tableAdapter: TableViewAdapterProtocol
     private var viewModel: HomeViewModelProtocol
+    private lazy var router: HomeRouterProtocol = HomeRouter(in: self)
     
     // MARK: - Life Cycle
-    init(tableAdapter: TableViewAdapterProtocol,
+    init(tableAdapter: TableViewAdapterProtocol = TableViewAdapter(),
          viewModel: HomeViewModelProtocol) {
         
         self.tableAdapter = tableAdapter
@@ -33,7 +35,24 @@ class HomeViewController: BaseViewController {
     private func setupUI() {
         subcribeToViewModelStatus()
         setupTableView()
+        setupNewPostButton()
+        
         viewModel.fetchData()
+    }
+    
+    private func setupNewPostButton() {
+        /**
+         You are probably wondering, why this guy just didn't use a button?
+         answer: I didn't wanted to create an invisible button (or a huge one)
+         */
+        let gesture = UITapGestureRecognizer(target: self,
+                                             action: #selector(newPostViewTapped))
+        
+        newPostView?.addGestureRecognizer(gesture)
+    }
+    
+    @objc private func newPostViewTapped() {
+        router.routeTo(transition: .createPost)
     }
     
     private func setupTableView() {

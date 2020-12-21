@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="GorillaTest" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="LRk-Qd-xbD" id="miT-Pd-Ifu"/>
+                <outlet property="newPostView" destination="9nI-Bc-uN6" id="9UD-3d-b9d"/>
                 <outlet property="tableView" destination="uf1-iG-4y1" id="M87-7a-EEf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

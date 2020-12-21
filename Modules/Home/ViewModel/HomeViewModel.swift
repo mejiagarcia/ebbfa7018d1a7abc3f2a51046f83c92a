@@ -8,7 +8,7 @@ class HomeViewModel: HomeViewModelProtocol {
     var status: ViewModelStatus<HomeViewModelStatus>?
     
     // MARK: - Life Cycle
-    required init(service: HomeServiceProtocol) {
+    required init(service: HomeServiceProtocol = HomeService(networking: Networking())) {
         self.service = service
     }
     
