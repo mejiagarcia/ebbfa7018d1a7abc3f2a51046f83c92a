@@ -28,14 +28,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwN-Az-w9f">
-                                <rect key="frame" x="20" y="61" width="385" height="20.5"/>
+                                <rect key="frame" x="20" y="67.5" width="385" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fee-32-8TN">
-                                <rect key="frame" x="20" y="30.5" width="385" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="40.5" width="385" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -44,7 +44,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pwN-Az-w9f" secondAttribute="bottom" constant="10" id="0If-t5-l1o"/>
                             <constraint firstAttribute="trailing" secondItem="oum-DU-dKF" secondAttribute="trailing" constant="20" id="0ba-nf-koX"/>
-                            <constraint firstItem="fee-32-8TN" firstAttribute="top" secondItem="oum-DU-dKF" secondAttribute="bottom" id="5jT-Vy-Ho4"/>
+                            <constraint firstItem="fee-32-8TN" firstAttribute="top" secondItem="oum-DU-dKF" secondAttribute="bottom" constant="10" id="5jT-Vy-Ho4"/>
                             <constraint firstAttribute="trailing" secondItem="pwN-Az-w9f" secondAttribute="trailing" constant="20" id="6du-xj-8YS"/>
                             <constraint firstItem="fee-32-8TN" firstAttribute="leading" secondItem="fxG-Oi-ZBk" secondAttribute="leading" constant="20" id="ByC-Kx-fAC"/>
                             <constraint firstItem="oum-DU-dKF" firstAttribute="top" secondItem="fxG-Oi-ZBk" secondAttribute="top" constant="10" id="GYt-1C-b6D"/>

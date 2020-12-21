@@ -18,7 +18,7 @@ class HomeViewModel: HomeViewModelProtocol {
         
         service.fetchPostList { [weak self] result in
             self?.notify(.stopLoading)
-
+            
             switch result {
             case .success(let posts):
                 self?.handleDataFromService(models: posts)
@@ -29,12 +29,31 @@ class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
+    func addPost(_ post: PostCreated) {
+        let newPost = PostCellViewModel(userName: "\(post.firstName) \(post.lastName)",
+                                        message: post.message,
+                                        date: Dates.dateToString(date: post.createdDate, style: .short),
+                                        image: nil)
+        dataSource.insert(newPost, at: .zero)
+        
+        notify(.dataLoaded)
+    }
+    
     // MARK: - Private Methods
     private func handleDataFromService(models: [Post]) {
         dataSource = models.map {
-            PostCellViewModel(userName: "\($0.firstName) \($0.lastName)",
-                              message: $0.message,
-                              date: $0.createdDate)
+            var stringDate = ""
+            
+            if let timeInterval = TimeInterval($0.timestamp) {
+                let date = Date(timeIntervalSince1970: timeInterval)
+                
+                stringDate = Dates.dateToString(date: date, style: .short)
+            }
+            
+            return PostCellViewModel(userName: "\($0.firstName) \($0.lastName)",
+                                     message: $0.message,
+                                     date: stringDate,
+                                     image: nil)
         }
         
         notify(.dataLoaded)

@@ -5,6 +5,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView?
     @IBOutlet private weak var newPostView: UIView?
+    @IBOutlet private weak var dateLabel: UILabel?
 
     // MARK: - Properties
     private var tableAdapter: TableViewAdapterProtocol
@@ -33,9 +34,11 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        title = ""
         subcribeToViewModelStatus()
         setupTableView()
         setupNewPostButton()
+        setupCurrentDateLabel()
         
         viewModel.fetchData()
     }
@@ -52,7 +55,7 @@ class HomeViewController: BaseViewController {
     }
     
     @objc private func newPostViewTapped() {
-        router.routeTo(transition: .createPost)
+        router.routeTo(transition: .createPost(delegate: self))
     }
     
     private func setupTableView() {
@@ -63,6 +66,10 @@ class HomeViewController: BaseViewController {
         
         tableAdapter.tableView = tableView
         tableAdapter.delegate = viewModel
+    }
+    
+    private func setupCurrentDateLabel() {
+        dateLabel?.text = Dates.dateToString(date: Date(), style: .medium).uppercased()
     }
     
     private func subcribeToViewModelStatus() {
@@ -96,5 +103,12 @@ class HomeViewController: BaseViewController {
     
     private func handleUnexpectedError() {
         Dialogs.show(title: "Error", message: "Unexcpeted error!", on: self)
+    }
+}
+
+// MARK: - CreatePostDelegate
+extension HomeViewController: CreatePostDelegate {
+    func postCreated(_ post: PostCreated) {
+        viewModel.addPost(post)
     }
 }

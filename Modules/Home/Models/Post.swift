@@ -5,11 +5,6 @@ struct Post: Codable {
     let lastName: String
     let message: String
     let timestamp: String
-    
-    var createdDate: Date? {
-        // TODO: Convert Unix date to legible date
-        return nil
-    }
 }
 
 // MARK: - Custom Conding Keys

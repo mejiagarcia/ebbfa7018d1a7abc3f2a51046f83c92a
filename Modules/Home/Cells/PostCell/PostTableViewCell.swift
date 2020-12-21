@@ -21,8 +21,8 @@ class PostTableViewCell: UITableViewCell {
     // MARK: - Private Methods
     private func setupCellWith(viewModel: PostCellViewModel) {
         titleLabel?.text = viewModel.userName
-        dateLabel?.text = viewModel.date?.description // FIXME
         messageLabel?.text = viewModel.message
+        dateLabel?.text = viewModel.date
     }
 }
 

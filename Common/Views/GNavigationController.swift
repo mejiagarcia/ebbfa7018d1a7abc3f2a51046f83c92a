@@ -19,6 +19,9 @@ class GNavigationController: UINavigationController {
     private func setupNavigationBar() {
         navigationBar.barTintColor = AppColors.blue
         navigationBar.isTranslucent = false
+        navigationBar.tintColor = .white
+        navigationBar.backgroundColor = .white
+        
         setupLogo()
     }
     

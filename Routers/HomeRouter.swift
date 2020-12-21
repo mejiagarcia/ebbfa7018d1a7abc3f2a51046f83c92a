@@ -2,7 +2,8 @@ import UIKit
 
 enum HomeTransitions {
     case home
-    case createPost
+    case createPost(delegate: CreatePostDelegate?)
+    case back
 }
 
 protocol HomeRouterProtocol {
@@ -28,9 +29,14 @@ class HomeRouter: HomeRouterProtocol, RouterProtocol {
             navigationController?.setViewControllers([homeViewController],
                                                      animated: true)
             
-        case .createPost:
-            navigationController?.pushViewController(CreatePostViewController(),
+        case .createPost(let delegate):
+            navigationController?.pushViewController(CreatePostViewController(viewModel: CreatePostViewModel(),
+                                                                              delegate: delegate,
+                                                                              router: self),
                                                      animated: true)
+            
+        case .back:
+            navigationController?.popViewController(animated: true)
         }
     }
 }

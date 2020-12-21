@@ -37,6 +37,11 @@
 		A52C3B2025902EC800AC5E8F /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B1E25902EC800AC5E8F /* CreatePostViewController.swift */; };
 		A52C3B2125902EC800AC5E8F /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52C3B1F25902EC800AC5E8F /* CreatePostViewController.xib */; };
 		A52C3B2525902FC500AC5E8F /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B2425902FC500AC5E8F /* RouterProtocol.swift */; };
+		A52C3B282590578F00AC5E8F /* ViewModelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B272590578F00AC5E8F /* ViewModelStatus.swift */; };
+		A52C3B2B259059FA00AC5E8F /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B2A259059FA00AC5E8F /* CreatePostViewModel.swift */; };
+		A52C3B2E25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B2D25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift */; };
+		A52C3B32259062C800AC5E8F /* PostCreated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B31259062C800AC5E8F /* PostCreated.swift */; };
+		A52C3B3725906E2C00AC5E8F /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B3625906E2C00AC5E8F /* Dates.swift */; };
 		A574BEA6259017140007A880 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574BEA5259017140007A880 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +78,11 @@
 		A52C3B1E25902EC800AC5E8F /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		A52C3B1F25902EC800AC5E8F /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 		A52C3B2425902FC500AC5E8F /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		A52C3B272590578F00AC5E8F /* ViewModelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelStatus.swift; sourceTree = "<group>"; };
+		A52C3B2A259059FA00AC5E8F /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
+		A52C3B2D25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModelProtocol.swift; sourceTree = "<group>"; };
+		A52C3B31259062C800AC5E8F /* PostCreated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreated.swift; sourceTree = "<group>"; };
+		A52C3B3625906E2C00AC5E8F /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		A574BEA5259017140007A880 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				A52C3AF225901F2900AC5E8F /* Dialogs.swift */,
+				A52C3B3625906E2C00AC5E8F /* Dates.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -218,8 +229,18 @@
 		A52C3B1D25902EB100AC5E8F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3B2A259059FA00AC5E8F /* CreatePostViewModel.swift */,
+				A52C3B2D25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A52C3B30259062BE00AC5E8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3B31259062C800AC5E8F /* PostCreated.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A574BE9F259016DF0007A880 /* Home */ = {
@@ -237,6 +258,7 @@
 		A574BEA0259016E30007A880 /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3B30259062BE00AC5E8F /* Model */,
 				A52C3B1D25902EB100AC5E8F /* ViewModel */,
 				A52C3B1B25902E9B00AC5E8F /* View */,
 			);
@@ -298,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				A52C3AC82590177A00AC5E8F /* BaseViewController.swift */,
+				A52C3B272590578F00AC5E8F /* ViewModelStatus.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -374,23 +397,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52C3B2E25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift in Sources */,
 				A52C3B2025902EC800AC5E8F /* CreatePostViewController.swift in Sources */,
 				A52C3AE225901D9700AC5E8F /* TableViewDataSource.swift in Sources */,
 				A52C3AFD2590220E00AC5E8F /* ServiceProtocol.swift in Sources */,
 				A52C3AF325901F2900AC5E8F /* Dialogs.swift in Sources */,
 				A52C3B03259024DD00AC5E8F /* NetworkingProtocol.swift in Sources */,
+				A52C3B32259062C800AC5E8F /* PostCreated.swift in Sources */,
 				A52C3B002590225E00AC5E8F /* Networking.swift in Sources */,
 				A52C3ACE259017F600AC5E8F /* GNavigationController.swift in Sources */,
 				A52C3B092590267900AC5E8F /* HomeServiceProtocol.swift in Sources */,
 				A52C3B2525902FC500AC5E8F /* RouterProtocol.swift in Sources */,
+				A52C3B3725906E2C00AC5E8F /* Dates.swift in Sources */,
 				A52A486A2590161F0043931E /* AppDelegate.swift in Sources */,
 				A52C3AE825901DBC00AC5E8F /* TableViewAdapter.swift in Sources */,
 				A52C3B0C2590268800AC5E8F /* HomeServiceErrors.swift in Sources */,
 				A52C3AC92590177A00AC5E8F /* BaseViewController.swift in Sources */,
 				A52C3AFA259020A700AC5E8F /* HomeService.swift in Sources */,
+				A52C3B282590578F00AC5E8F /* ViewModelStatus.swift in Sources */,
 				A52C3ADC25901D7700AC5E8F /* CellProtocol.swift in Sources */,
 				A52C3AE525901DA800AC5E8F /* TableViewAdapterProtocol.swift in Sources */,
 				A52C3B13259027EF00AC5E8F /* PostTableViewCell.swift in Sources */,
+				A52C3B2B259059FA00AC5E8F /* CreatePostViewModel.swift in Sources */,
 				A52C3ADF25901D8700AC5E8F /* CellViewModelProtocol.swift in Sources */,
 				A52C3AF72590201A00AC5E8F /* Post.swift in Sources */,
 				A52C3B06259024EB00AC5E8F /* NetworkingError.swift in Sources */,

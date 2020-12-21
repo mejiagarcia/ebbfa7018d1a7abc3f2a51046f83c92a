@@ -1,7 +1,5 @@
 import UIKit
 
-typealias ViewModelStatus<T> = (T) -> Void
-
 enum HomeViewModelStatus {
     case isLoading
     case stopLoading
@@ -16,4 +14,5 @@ protocol HomeViewModelProtocol: TableViewDataSource {
     init(service: HomeServiceProtocol)
     
     func fetchData()
+    func addPost(_ post: PostCreated)
 }
