@@ -15,6 +15,14 @@
 		A52C3AC92590177A00AC5E8F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AC82590177A00AC5E8F /* BaseViewController.swift */; };
 		A52C3ACE259017F600AC5E8F /* GNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3ACD259017F600AC5E8F /* GNavigationController.swift */; };
 		A52C3AD3259018C300AC5E8F /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AD2259018C300AC5E8F /* AppColors.swift */; };
+		A52C3ADC25901D7700AC5E8F /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3ADB25901D7700AC5E8F /* CellProtocol.swift */; };
+		A52C3ADF25901D8700AC5E8F /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3ADE25901D8700AC5E8F /* CellViewModelProtocol.swift */; };
+		A52C3AE225901D9700AC5E8F /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AE125901D9700AC5E8F /* TableViewDataSource.swift */; };
+		A52C3AE525901DA800AC5E8F /* TableViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AE425901DA800AC5E8F /* TableViewAdapterProtocol.swift */; };
+		A52C3AE825901DBC00AC5E8F /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AE725901DBC00AC5E8F /* TableViewAdapter.swift */; };
+		A52C3AEC25901DDA00AC5E8F /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AEB25901DDA00AC5E8F /* HomeViewModelProtocol.swift */; };
+		A52C3AEF25901E7300AC5E8F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AEE25901E7300AC5E8F /* HomeViewModel.swift */; };
+		A52C3AF325901F2900AC5E8F /* Dialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AF225901F2900AC5E8F /* Dialogs.swift */; };
 		A574BEA6259017140007A880 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574BEA5259017140007A880 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +37,14 @@
 		A52C3AC82590177A00AC5E8F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A52C3ACD259017F600AC5E8F /* GNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNavigationController.swift; sourceTree = "<group>"; };
 		A52C3AD2259018C300AC5E8F /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		A52C3ADB25901D7700AC5E8F /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		A52C3ADE25901D8700AC5E8F /* CellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProtocol.swift; sourceTree = "<group>"; };
+		A52C3AE125901D9700AC5E8F /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		A52C3AE425901DA800AC5E8F /* TableViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterProtocol.swift; sourceTree = "<group>"; };
+		A52C3AE725901DBC00AC5E8F /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		A52C3AEB25901DDA00AC5E8F /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
+		A52C3AEE25901E7300AC5E8F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A52C3AF225901F2900AC5E8F /* Dialogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogs.swift; sourceTree = "<group>"; };
 		A574BEA5259017140007A880 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,9 +129,33 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		A52C3AD725901A6400AC5E8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A52C3AD925901C1100AC5E8F /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3AE725901DBC00AC5E8F /* TableViewAdapter.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		A52C3AF125901F1C00AC5E8F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3AF225901F2900AC5E8F /* Dialogs.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A574BE9F259016DF0007A880 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3AD725901A6400AC5E8F /* Models */,
 				A52C3AC22590175A00AC5E8F /* Service */,
 				A574BEA3259017010007A880 /* ViewModel */,
 				A574BEA2259016FC0007A880 /* ViewController */,
@@ -142,6 +182,8 @@
 		A574BEA3259017010007A880 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3AEB25901DDA00AC5E8F /* HomeViewModelProtocol.swift */,
+				A52C3AEE25901E7300AC5E8F /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +199,8 @@
 		A574BEA8259017220007A880 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3AF125901F1C00AC5E8F /* Utils */,
+				A52C3AD925901C1100AC5E8F /* TableViews */,
 				A52C3AD1259018BA00AC5E8F /* Colors */,
 				A52C3ACC259017E700AC5E8F /* Views */,
 				A574BEAA259017350007A880 /* Bases */,
@@ -168,6 +212,10 @@
 		A574BEA9259017300007A880 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3AE425901DA800AC5E8F /* TableViewAdapterProtocol.swift */,
+				A52C3ADB25901D7700AC5E8F /* CellProtocol.swift */,
+				A52C3ADE25901D8700AC5E8F /* CellViewModelProtocol.swift */,
+				A52C3AE125901D9700AC5E8F /* TableViewDataSource.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -250,10 +298,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52C3AE225901D9700AC5E8F /* TableViewDataSource.swift in Sources */,
+				A52C3AF325901F2900AC5E8F /* Dialogs.swift in Sources */,
 				A52C3ACE259017F600AC5E8F /* GNavigationController.swift in Sources */,
 				A52A486A2590161F0043931E /* AppDelegate.swift in Sources */,
+				A52C3AE825901DBC00AC5E8F /* TableViewAdapter.swift in Sources */,
 				A52C3AC92590177A00AC5E8F /* BaseViewController.swift in Sources */,
+				A52C3ADC25901D7700AC5E8F /* CellProtocol.swift in Sources */,
+				A52C3AE525901DA800AC5E8F /* TableViewAdapterProtocol.swift in Sources */,
+				A52C3ADF25901D8700AC5E8F /* CellViewModelProtocol.swift in Sources */,
+				A52C3AEF25901E7300AC5E8F /* HomeViewModel.swift in Sources */,
 				A52C3AD3259018C300AC5E8F /* AppColors.swift in Sources */,
+				A52C3AEC25901DDA00AC5E8F /* HomeViewModelProtocol.swift in Sources */,
 				A574BEA6259017140007A880 /* HomeRouter.swift in Sources */,
 				A52C3AC52590176700AC5E8F /* HomeViewController.swift in Sources */,
 			);

@@ -3,7 +3,11 @@ import UIKit
 class GNavigationController: UINavigationController {
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.viewControllers = [HomeViewController()]
+        
+        viewControllers = [
+            HomeViewController(tableAdapter: TableViewAdapter(),
+                               viewModel: HomeViewModel())
+        ]
         
         setupNavigationBar()
     }
