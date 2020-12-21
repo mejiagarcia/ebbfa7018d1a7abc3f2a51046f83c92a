@@ -31,6 +31,9 @@
 		A52C3B06259024EB00AC5E8F /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B05259024EB00AC5E8F /* NetworkingError.swift */; };
 		A52C3B092590267900AC5E8F /* HomeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B082590267900AC5E8F /* HomeServiceProtocol.swift */; };
 		A52C3B0C2590268800AC5E8F /* HomeServiceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B0B2590268800AC5E8F /* HomeServiceErrors.swift */; };
+		A52C3B13259027EF00AC5E8F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B11259027EF00AC5E8F /* PostTableViewCell.swift */; };
+		A52C3B14259027EF00AC5E8F /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52C3B12259027EF00AC5E8F /* PostTableViewCell.xib */; };
+		A52C3B172590294D00AC5E8F /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B162590294D00AC5E8F /* PostCellViewModel.swift */; };
 		A574BEA6259017140007A880 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574BEA5259017140007A880 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,9 @@
 		A52C3B05259024EB00AC5E8F /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		A52C3B082590267900AC5E8F /* HomeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceProtocol.swift; sourceTree = "<group>"; };
 		A52C3B0B2590268800AC5E8F /* HomeServiceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceErrors.swift; sourceTree = "<group>"; };
+		A52C3B11259027EF00AC5E8F /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		A52C3B12259027EF00AC5E8F /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		A52C3B162590294D00AC5E8F /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
 		A574BEA5259017140007A880 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,13 +182,32 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A52C3B0F259027D800AC5E8F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3B10259027DC00AC5E8F /* PostCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A52C3B10259027DC00AC5E8F /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				A52C3B11259027EF00AC5E8F /* PostTableViewCell.swift */,
+				A52C3B12259027EF00AC5E8F /* PostTableViewCell.xib */,
+				A52C3B162590294D00AC5E8F /* PostCellViewModel.swift */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
 		A574BE9F259016DF0007A880 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3B0F259027D800AC5E8F /* Cells */,
 				A52C3AD725901A6400AC5E8F /* Models */,
 				A52C3AC22590175A00AC5E8F /* Service */,
 				A574BEA3259017010007A880 /* ViewModel */,
-				A574BEA2259016FC0007A880 /* ViewController */,
+				A574BEA2259016FC0007A880 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -194,13 +219,13 @@
 			path = CreatePost;
 			sourceTree = "<group>";
 		};
-		A574BEA2259016FC0007A880 /* ViewController */ = {
+		A574BEA2259016FC0007A880 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A52C3AC32590176700AC5E8F /* HomeViewController.swift */,
 				A52C3AC42590176700AC5E8F /* HomeViewController.xib */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		A574BEA3259017010007A880 /* ViewModel */ = {
@@ -312,6 +337,7 @@
 				A52A4876259016210043931E /* LaunchScreen.storyboard in Resources */,
 				A52A4873259016210043931E /* Assets.xcassets in Resources */,
 				A52C3AC62590176700AC5E8F /* HomeViewController.xib in Resources */,
+				A52C3B14259027EF00AC5E8F /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,11 +362,13 @@
 				A52C3AFA259020A700AC5E8F /* HomeService.swift in Sources */,
 				A52C3ADC25901D7700AC5E8F /* CellProtocol.swift in Sources */,
 				A52C3AE525901DA800AC5E8F /* TableViewAdapterProtocol.swift in Sources */,
+				A52C3B13259027EF00AC5E8F /* PostTableViewCell.swift in Sources */,
 				A52C3ADF25901D8700AC5E8F /* CellViewModelProtocol.swift in Sources */,
 				A52C3AF72590201A00AC5E8F /* Post.swift in Sources */,
 				A52C3B06259024EB00AC5E8F /* NetworkingError.swift in Sources */,
 				A52C3AEF25901E7300AC5E8F /* HomeViewModel.swift in Sources */,
 				A52C3AD3259018C300AC5E8F /* AppColors.swift in Sources */,
+				A52C3B172590294D00AC5E8F /* PostCellViewModel.swift in Sources */,
 				A52C3AEC25901DDA00AC5E8F /* HomeViewModelProtocol.swift in Sources */,
 				A574BEA6259017140007A880 /* HomeRouter.swift in Sources */,
 				A52C3AC52590176700AC5E8F /* HomeViewController.swift in Sources */,

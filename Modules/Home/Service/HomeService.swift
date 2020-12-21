@@ -26,7 +26,7 @@ class HomeService: HomeServiceProtocol {
     
     // MARK: - Private Methods
     private func getPostListEndpoint() -> URL {
-        return URL(string: "")! // FIXME
+        return URL(string: "http://gl-endpoint.herokuapp.com/feed")! // FIXME
     }
     
     private func getServiceError(with error: NetworkingError) -> HomeServiceErrors {

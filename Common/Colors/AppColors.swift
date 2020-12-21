@@ -1,5 +1,5 @@
 import UIKit
 
 struct AppColors {
-    static let blue = UIColor.blue
+    static let blue = UIColor(named: "AppBlue")
 }

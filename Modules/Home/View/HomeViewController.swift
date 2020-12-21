@@ -33,9 +33,15 @@ class HomeViewController: BaseViewController {
     private func setupUI() {
         subcribeToViewModelStatus()
         setupTableView()
+        viewModel.fetchData()
     }
     
     private func setupTableView() {
+        tableView?.separatorStyle = .none
+        tableView?.register(UINib(nibName: String(describing: PostTableViewCell.self),
+                                  bundle: nil),
+                            forCellReuseIdentifier: String(describing: PostTableViewCell.self))
+        
         tableAdapter.tableView = tableView
         tableAdapter.delegate = viewModel
     }
