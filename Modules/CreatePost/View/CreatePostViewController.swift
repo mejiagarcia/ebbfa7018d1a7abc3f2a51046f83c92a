@@ -89,6 +89,10 @@ class CreatePostViewController: BaseViewController {
     }
     
     @objc func shareButtonTapped() {
+        guard textCount <= viewModel.charLimit else {
+            return
+        }
+        
         viewModel.createPost(message: messageText?.text ?? "")
     }
     
