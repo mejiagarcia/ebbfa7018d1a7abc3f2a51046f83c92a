@@ -11,7 +11,11 @@ class HomeService: HomeServiceProtocol {
     
     // MARK: - Internal Methods
     func fetchPostList(onCompletionBlock: @escaping PostListCompletionBlock) {
-        networking.get(endpoint: getPostListEndpoint()) { [weak self] (result: Result<[Post], NetworkingError>) in
+        guard let endpoint = getPostListEndpoint() else {
+            return onCompletionBlock(.failure(.unexpectedError))
+        }
+        
+        networking.get(endpoint: endpoint) { [weak self] (result: Result<[Post], NetworkingError>) in
             guard let self = self else { return }
             
             switch result {
@@ -25,8 +29,13 @@ class HomeService: HomeServiceProtocol {
     }
     
     // MARK: - Private Methods
-    private func getPostListEndpoint() -> URL {
-        return URL(string: "http://gl-endpoint.herokuapp.com/feed")! // FIXME
+    private func getPostListEndpoint() -> URL? {
+        // I totally understand that this is a very basic implementation:
+        // My ideas:
+        // 1. Put domain in user-defined properties in project level config
+        // 2. Put the endpoint "/feed" in some kind of "Endpoints.plist" file
+        // The time was not enough
+        return URL(string: "http://gl-endpoint.herokuapp.com/feed")
     }
     
     private func getServiceError(with error: NetworkingError) -> HomeServiceErrors {

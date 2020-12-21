@@ -5,7 +5,12 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel?
     @IBOutlet private weak var dateLabel: UILabel?
     @IBOutlet private weak var messageLabel: UILabel?
+    @IBOutlet private weak var postImageView: UIImageView?
+    @IBOutlet private weak var postImageViewHeightConstraint: NSLayoutConstraint?
 
+    // MARK: - Properties
+    private let postImageViewHeight: CGFloat = 280
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -16,6 +21,8 @@ class PostTableViewCell: UITableViewCell {
         titleLabel?.text = nil
         dateLabel?.text = nil
         messageLabel?.text = nil
+        postImageView?.image = nil
+        postImageViewHeightConstraint?.constant = postImageViewHeight
     }
     
     // MARK: - Private Methods
@@ -23,6 +30,12 @@ class PostTableViewCell: UITableViewCell {
         titleLabel?.text = viewModel.userName
         messageLabel?.text = viewModel.message
         dateLabel?.text = viewModel.date
+        
+        if let postImage = viewModel.image {
+            postImageView?.image = postImage
+        } else {
+            postImageViewHeightConstraint?.constant = .zero
+        }
     }
 }
 

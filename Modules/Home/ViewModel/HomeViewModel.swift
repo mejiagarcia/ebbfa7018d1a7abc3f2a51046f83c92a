@@ -33,7 +33,7 @@ class HomeViewModel: HomeViewModelProtocol {
         let newPost = PostCellViewModel(userName: "\(post.firstName) \(post.lastName)",
                                         message: post.message,
                                         date: Dates.dateToString(date: post.createdDate, style: .short),
-                                        image: nil)
+                                        image: post.image)
         dataSource.insert(newPost, at: .zero)
         
         notify(.dataLoaded)

@@ -42,6 +42,9 @@
 		A52C3B2E25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B2D25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift */; };
 		A52C3B32259062C800AC5E8F /* PostCreated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B31259062C800AC5E8F /* PostCreated.swift */; };
 		A52C3B3725906E2C00AC5E8F /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B3625906E2C00AC5E8F /* Dates.swift */; };
+		A52C3B3A2590713800AC5E8F /* PostImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B392590713800AC5E8F /* PostImagePicker.swift */; };
+		A52C3B3D2590779D00AC5E8F /* CreatePostLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B3C2590779D00AC5E8F /* CreatePostLang.swift */; };
+		A52C3B40259078A100AC5E8F /* HomeLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B3F259078A100AC5E8F /* HomeLang.swift */; };
 		A574BEA6259017140007A880 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574BEA5259017140007A880 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,9 @@
 		A52C3B2D25905A5D00AC5E8F /* CreatePostViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModelProtocol.swift; sourceTree = "<group>"; };
 		A52C3B31259062C800AC5E8F /* PostCreated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreated.swift; sourceTree = "<group>"; };
 		A52C3B3625906E2C00AC5E8F /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
+		A52C3B392590713800AC5E8F /* PostImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImagePicker.swift; sourceTree = "<group>"; };
+		A52C3B3C2590779D00AC5E8F /* CreatePostLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostLang.swift; sourceTree = "<group>"; };
+		A52C3B3F259078A100AC5E8F /* HomeLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLang.swift; sourceTree = "<group>"; };
 		A574BEA5259017140007A880 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +257,7 @@
 				A52C3AC22590175A00AC5E8F /* Service */,
 				A574BEA3259017010007A880 /* ViewModel */,
 				A574BEA2259016FC0007A880 /* View */,
+				A52C3B3F259078A100AC5E8F /* HomeLang.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -261,6 +268,8 @@
 				A52C3B30259062BE00AC5E8F /* Model */,
 				A52C3B1D25902EB100AC5E8F /* ViewModel */,
 				A52C3B1B25902E9B00AC5E8F /* View */,
+				A52C3B392590713800AC5E8F /* PostImagePicker.swift */,
+				A52C3B3C2590779D00AC5E8F /* CreatePostLang.swift */,
 			);
 			path = CreatePost;
 			sourceTree = "<group>";
@@ -403,10 +412,12 @@
 				A52C3AFD2590220E00AC5E8F /* ServiceProtocol.swift in Sources */,
 				A52C3AF325901F2900AC5E8F /* Dialogs.swift in Sources */,
 				A52C3B03259024DD00AC5E8F /* NetworkingProtocol.swift in Sources */,
+				A52C3B40259078A100AC5E8F /* HomeLang.swift in Sources */,
 				A52C3B32259062C800AC5E8F /* PostCreated.swift in Sources */,
 				A52C3B002590225E00AC5E8F /* Networking.swift in Sources */,
 				A52C3ACE259017F600AC5E8F /* GNavigationController.swift in Sources */,
 				A52C3B092590267900AC5E8F /* HomeServiceProtocol.swift in Sources */,
+				A52C3B3D2590779D00AC5E8F /* CreatePostLang.swift in Sources */,
 				A52C3B2525902FC500AC5E8F /* RouterProtocol.swift in Sources */,
 				A52C3B3725906E2C00AC5E8F /* Dates.swift in Sources */,
 				A52A486A2590161F0043931E /* AppDelegate.swift in Sources */,
@@ -420,6 +431,7 @@
 				A52C3B13259027EF00AC5E8F /* PostTableViewCell.swift in Sources */,
 				A52C3B2B259059FA00AC5E8F /* CreatePostViewModel.swift in Sources */,
 				A52C3ADF25901D8700AC5E8F /* CellViewModelProtocol.swift in Sources */,
+				A52C3B3A2590713800AC5E8F /* PostImagePicker.swift in Sources */,
 				A52C3AF72590201A00AC5E8F /* Post.swift in Sources */,
 				A52C3B06259024EB00AC5E8F /* NetworkingError.swift in Sources */,
 				A52C3AEF25901E7300AC5E8F /* HomeViewModel.swift in Sources */,

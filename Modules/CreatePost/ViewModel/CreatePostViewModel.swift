@@ -11,9 +11,10 @@ class CreatePostViewModel: CreatePostViewModelProtocol {
     lazy var charConfig = (min: 1, max: charLimit)
     let charLimit = 155
     var status: ViewModelStatus<CreatePostViewModelStatus>?
+    var imagePicked: UIImage?
     
     // MARK: - Internal Methods
-    func createPost(message: String, imagePicked: UIImage?) {
+    func createPost(message: String) {
         if message.count > charConfig.max {
             return notify(.charactersExceeded)
         }

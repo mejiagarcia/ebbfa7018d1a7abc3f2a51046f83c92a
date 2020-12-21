@@ -8,11 +8,14 @@ class CreatePostViewController: BaseViewController {
     // MARK: - UI References
     @IBOutlet private weak var messageText: UITextView?
     @IBOutlet private weak var charactersLabel: UILabel?
+    @IBOutlet private weak var imagePicked: UIImageView?
 
     // MARK: - Properties
     private var viewModel: CreatePostViewModelProtocol
-    private weak var delegate: CreatePostDelegate?
     private let router: HomeRouterProtocol
+    private weak var delegate: CreatePostDelegate?
+    private lazy var imagePicker = ImagePicker(presentationController: self, delegate: self)
+    
     private var textCount: Int {
         messageText?.text?.trimmingCharacters(in: .whitespacesAndNewlines).count ?? 0
     }
@@ -48,7 +51,7 @@ class CreatePostViewController: BaseViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
-        title = "Create Post"
+        title = CreatePostLang.title
         
         setupTextListener()
         subcribeToViewModelStatus()
@@ -60,7 +63,6 @@ class CreatePostViewController: BaseViewController {
         messageText?.delegate = self
     }
     
-    // FIXME: Hardcoded strings
     private func subcribeToViewModelStatus() {
         viewModel.status = { [weak self] status in
             guard let self = self else { return }
@@ -71,28 +73,33 @@ class CreatePostViewController: BaseViewController {
                 self.router.routeTo(transition: .back)
                 
             case .missingCharacters:
-                Dialogs.show(title: "Error", message: "Invalid text, the message length must be between 1 and \(self.viewModel.charLimit)", on: self)
+                Dialogs.show(title: CreatePostLang.Error.title, message: CreatePostLang.Error.message, on: self)
                 
             case .charactersExceeded:
-                Dialogs.show(title: "Error", message: "", on: self)
+                Dialogs.show(title: CreatePostLang.Error.title, message: CreatePostLang.Error.message, on: self)
             }
         }
     }
     
     private func setupShareButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share",
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: CreatePostLang.shareButton,
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(shareButtonTapped))
     }
     
     @objc func shareButtonTapped() {
-        viewModel.createPost(message: messageText?.text ?? "", imagePicked: nil)
+        viewModel.createPost(message: messageText?.text ?? "")
     }
     
     private func setupLabelCharacters() {
         charactersLabel?.textColor = textCount > viewModel.charLimit ? .red : .lightGray
         charactersLabel?.text = "\(textCount)/\(viewModel.charLimit)"
+    }
+    
+    // MARK: - UI Actions
+    @IBAction private func addPhotoButtonAction() {
+        imagePicker.open()
     }
 }
 
@@ -100,5 +107,13 @@ class CreatePostViewController: BaseViewController {
 extension CreatePostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         setupLabelCharacters()
+    }
+}
+
+// MARK: - ImagePickerDelegate
+extension CreatePostViewController: ImagePickerDelegate {
+    func imageSelected(image: UIImage?) {
+        viewModel.imagePicked = image
+        imagePicked?.image = image
     }
 }

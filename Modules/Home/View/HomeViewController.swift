@@ -94,15 +94,12 @@ class HomeViewController: BaseViewController {
     }
     
     // MARK: - Error Methods
-    
-    // FIXME: Hardcoded strings
-    
     private func handleBusinessError() {
-        Dialogs.show(title: "Error", message: "Business error!", on: self)
+        Dialogs.show(title: HomeLang.Error.title, message: HomeLang.Error.message, on: self)
     }
     
     private func handleUnexpectedError() {
-        Dialogs.show(title: "Error", message: "Unexcpeted error!", on: self)
+        Dialogs.show(title: HomeLang.Error.title, message: HomeLang.Error.message, on: self)
     }
 }
 

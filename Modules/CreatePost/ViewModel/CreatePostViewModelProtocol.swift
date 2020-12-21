@@ -3,6 +3,6 @@ import UIKit
 protocol CreatePostViewModelProtocol {
     var status: ViewModelStatus<CreatePostViewModelStatus>? { get set }
     var charLimit: Int { get }
-
-    func createPost(message: String, imagePicked: UIImage?)
+    var imagePicked: UIImage? { get set }
+    func createPost(message: String)
 }
