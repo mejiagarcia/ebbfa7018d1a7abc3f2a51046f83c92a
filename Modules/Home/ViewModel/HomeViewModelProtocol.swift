@@ -12,5 +12,8 @@ enum HomeViewModelStatus {
 
 protocol HomeViewModelProtocol: TableViewDataSource {
     var status: ViewModelStatus<HomeViewModelStatus>? { get set }
+    
+    init(service: HomeServiceProtocol)
+    
     func fetchData()
 }

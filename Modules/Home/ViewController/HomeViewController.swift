@@ -10,7 +10,9 @@ class HomeViewController: BaseViewController {
     private var viewModel: HomeViewModelProtocol
     
     // MARK: - Life Cycle
-    init(tableAdapter: TableViewAdapterProtocol, viewModel: HomeViewModelProtocol) {
+    init(tableAdapter: TableViewAdapterProtocol,
+         viewModel: HomeViewModelProtocol) {
+        
         self.tableAdapter = tableAdapter
         self.viewModel = viewModel
         

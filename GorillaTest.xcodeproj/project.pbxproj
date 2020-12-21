@@ -23,6 +23,14 @@
 		A52C3AEC25901DDA00AC5E8F /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AEB25901DDA00AC5E8F /* HomeViewModelProtocol.swift */; };
 		A52C3AEF25901E7300AC5E8F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AEE25901E7300AC5E8F /* HomeViewModel.swift */; };
 		A52C3AF325901F2900AC5E8F /* Dialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AF225901F2900AC5E8F /* Dialogs.swift */; };
+		A52C3AF72590201A00AC5E8F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AF62590201A00AC5E8F /* Post.swift */; };
+		A52C3AFA259020A700AC5E8F /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AF9259020A700AC5E8F /* HomeService.swift */; };
+		A52C3AFD2590220E00AC5E8F /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AFC2590220E00AC5E8F /* ServiceProtocol.swift */; };
+		A52C3B002590225E00AC5E8F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3AFF2590225E00AC5E8F /* Networking.swift */; };
+		A52C3B03259024DD00AC5E8F /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B02259024DD00AC5E8F /* NetworkingProtocol.swift */; };
+		A52C3B06259024EB00AC5E8F /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B05259024EB00AC5E8F /* NetworkingError.swift */; };
+		A52C3B092590267900AC5E8F /* HomeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B082590267900AC5E8F /* HomeServiceProtocol.swift */; };
+		A52C3B0C2590268800AC5E8F /* HomeServiceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52C3B0B2590268800AC5E8F /* HomeServiceErrors.swift */; };
 		A574BEA6259017140007A880 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574BEA5259017140007A880 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +53,14 @@
 		A52C3AEB25901DDA00AC5E8F /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		A52C3AEE25901E7300AC5E8F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A52C3AF225901F2900AC5E8F /* Dialogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogs.swift; sourceTree = "<group>"; };
+		A52C3AF62590201A00AC5E8F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A52C3AF9259020A700AC5E8F /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		A52C3AFC2590220E00AC5E8F /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		A52C3AFF2590225E00AC5E8F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A52C3B02259024DD00AC5E8F /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		A52C3B05259024EB00AC5E8F /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		A52C3B082590267900AC5E8F /* HomeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceProtocol.swift; sourceTree = "<group>"; };
+		A52C3B0B2590268800AC5E8F /* HomeServiceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceErrors.swift; sourceTree = "<group>"; };
 		A574BEA5259017140007A880 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +118,9 @@
 		A52C3AC22590175A00AC5E8F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3AF9259020A700AC5E8F /* HomeService.swift */,
+				A52C3B082590267900AC5E8F /* HomeServiceProtocol.swift */,
+				A52C3B0B2590268800AC5E8F /* HomeServiceErrors.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -109,6 +128,10 @@
 		A52C3ACB2590179F00AC5E8F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3AFC2590220E00AC5E8F /* ServiceProtocol.swift */,
+				A52C3AFF2590225E00AC5E8F /* Networking.swift */,
+				A52C3B02259024DD00AC5E8F /* NetworkingProtocol.swift */,
+				A52C3B05259024EB00AC5E8F /* NetworkingError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -132,6 +155,7 @@
 		A52C3AD725901A6400AC5E8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A52C3AF62590201A00AC5E8F /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -299,14 +323,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A52C3AE225901D9700AC5E8F /* TableViewDataSource.swift in Sources */,
+				A52C3AFD2590220E00AC5E8F /* ServiceProtocol.swift in Sources */,
 				A52C3AF325901F2900AC5E8F /* Dialogs.swift in Sources */,
+				A52C3B03259024DD00AC5E8F /* NetworkingProtocol.swift in Sources */,
+				A52C3B002590225E00AC5E8F /* Networking.swift in Sources */,
 				A52C3ACE259017F600AC5E8F /* GNavigationController.swift in Sources */,
+				A52C3B092590267900AC5E8F /* HomeServiceProtocol.swift in Sources */,
 				A52A486A2590161F0043931E /* AppDelegate.swift in Sources */,
 				A52C3AE825901DBC00AC5E8F /* TableViewAdapter.swift in Sources */,
+				A52C3B0C2590268800AC5E8F /* HomeServiceErrors.swift in Sources */,
 				A52C3AC92590177A00AC5E8F /* BaseViewController.swift in Sources */,
+				A52C3AFA259020A700AC5E8F /* HomeService.swift in Sources */,
 				A52C3ADC25901D7700AC5E8F /* CellProtocol.swift in Sources */,
 				A52C3AE525901DA800AC5E8F /* TableViewAdapterProtocol.swift in Sources */,
 				A52C3ADF25901D8700AC5E8F /* CellViewModelProtocol.swift in Sources */,
+				A52C3AF72590201A00AC5E8F /* Post.swift in Sources */,
+				A52C3B06259024EB00AC5E8F /* NetworkingError.swift in Sources */,
 				A52C3AEF25901E7300AC5E8F /* HomeViewModel.swift in Sources */,
 				A52C3AD3259018C300AC5E8F /* AppColors.swift in Sources */,
 				A52C3AEC25901DDA00AC5E8F /* HomeViewModelProtocol.swift in Sources */,

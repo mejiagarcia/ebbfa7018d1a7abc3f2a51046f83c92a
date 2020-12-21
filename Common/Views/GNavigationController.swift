@@ -6,7 +6,7 @@ class GNavigationController: UINavigationController {
         
         viewControllers = [
             HomeViewController(tableAdapter: TableViewAdapter(),
-                               viewModel: HomeViewModel())
+                               viewModel: HomeViewModel(service: HomeService(networking: Networking())))
         ]
         
         setupNavigationBar()
